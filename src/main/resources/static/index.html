@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>파일 업로드 페이지</title>
+    <link
+      href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>tus-js-client demo - File Upload</h1>
+
+      <div class="alert alert-warining hidden" id="support-alert">
+        <b>Warning!</b> Your browser does not seem to support the features
+        necessary to run tus-js-client. The buttons below may work but probably
+        will fail silently.
+      </div>
+
+      <br />
+
+      <!-- <input type="file" multiple/> -->
+      <input id="input" type="file" webkitdirectory multiple/>
+
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="span8">
+          <div class="progress progress-striped progress-success">
+            <div class="bar" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="span4">
+          <button class="btn stop" id="toggle-btn">start upload</button>
+        </div>
+      </div>
+
+      <hr />
+      <h3>Uploads</h3>
+      <p id="upload-list">Succesful uploads will be listed here. Try one!</p>
+    </div>
+  </body>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tus-js-client@2.1.1/dist/tus.js"></script>
+  <script src="./demo.js"></script>
+</html>
